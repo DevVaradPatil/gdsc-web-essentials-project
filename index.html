@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Starbuks Coffee</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section>
+      <div class="circle"></div>
+      <header>
+        <a href="#"><img src="images/logo.png" class="logo" alt="" /></a>
+        <ul class="navigation">
+          <li><a href="#" class="active1">Home</a></li>
+          <li><a href="#">Menu</a></li>
+          <li><a href="#">What's New</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </header>
+      <div class="content">
+        <div class="textBox">
+          <h2>It's not just Coffee<br />It's <span>Starbucks </span></h2>
+          <p>
+            Whether you're searching for something new to warm your mug, seeking
+            the best brew method for your favorite blend or exploring our rarest
+            offerings, you’ve come to the right place.
+          </p>
+          <a href="">Learn More</a>
+        </div>
+        <div class="imgBox">
+          <img src="images/img1.png" class="starbucks" alt="" />
+        </div>
+      </div>
+      <ul class="thumb">
+        <li>
+          <img
+            src="images/thumb1.png"
+            onclick="imgSlider('images/img1.png'); changeTheme('#017143')"
+            alt=""
+          />
+        </li>
+        <li>
+          <img
+            src="images/thumb2.png"
+            onclick="imgSlider('images/img2.png'); changeTheme('#eb7495')"
+            alt=""
+          />
+        </li>
+        <li>
+          <img
+            src="images/thumb3.png"
+            onclick="imgSlider('images/img3.png'); changeTheme('#d752b1')"
+            alt=""
+          />
+        </li>
+      </ul>
+      <ul class="sci">
+        <li>
+          <a href=""><img src="images/facebook.png" alt="" /></a>
+        </li>
+        <li>
+          <a href=""><img src="images/twitter.png" alt="" /></a>
+        </li>
+        <li>
+          <a href=""><img src="images/instagram.png" alt="" /></a>
+        </li>
+      </ul>
+    </section>
+
+    <script>
+      function imgSlider(anything) {
+        document.querySelector(".starbucks").src = anything;
+      }
+
+      function changeTheme(color) {
+        const circle = document.querySelector(".circle");
+        const home = document.querySelector(".active1");
+        home.style.background = color;
+        circle.style.background = color;
+      }
+
+      function toggleMenu() {
+        var menuToggle = document.querySelector(".toggle");
+        var navigation = document.querySelector(".navigation");
+        menuToggle.classList.toggle("active");
+        navigation.classList.toggle("active");
+      }
+    </script>
+  </body>
+</html>
